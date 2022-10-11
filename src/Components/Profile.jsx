@@ -1,4 +1,5 @@
 import React from "react";
+import { Options } from "./Options";
 
 export const Profile = ({
   name,
@@ -14,9 +15,12 @@ export const Profile = ({
         <div className="home_data bd-grid">
           <img src={image} alt="profile_image" className="home_img" />
           <h1 className="home_title">
-            <strong>{name}</strong>
+            {name}
           </h1>
           <h3 className="home_profession">{ocupation}</h3>
+          <div>
+            <a download="" href="myResume.pdf" className="home-button-movil">Letöltés</a>
+          </div>
         </div>
 
         <div className="home_address bd-grid">
@@ -31,6 +35,12 @@ export const Profile = ({
           </span>
         </div>
       </div>
+      <Options />
+
+      <a download="" href="myResume.pdf" >
+
+      <i className='bx bx-download generate-pdf' title="Generate PDF" id="resume-button"></i>
+      </a>
     </section>
   );
 };

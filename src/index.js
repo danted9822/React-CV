@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom";
 import './index.css';
 import { Resume } from "./Pages/Resume";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <Resume/>
-  </React.StrictMode>
+    <Resume />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 

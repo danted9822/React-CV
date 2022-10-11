@@ -2,7 +2,8 @@ import React from "react";
 
 export const Skills = ({
   technicalLabel,
-  technicalSkills
+  technicalSkills1,
+  technicalSkills2
 }) => {
   return (
     <>
@@ -10,7 +11,10 @@ export const Skills = ({
         <h2 className="section_title">{technicalLabel}</h2>
         <div className="skills_content bd-grid">
           <ul className="skills_data">
-            {technicalSkills.map((skill) => <Skill key={skill} skill={skill} />)}
+            {technicalSkills1.map((skill) => <Skill key={skill} skill={skill} />)}
+          </ul>
+          <ul className="skills_data">
+            {technicalSkills2.map((skill) => <Skill key={skill} skill={skill} />)}
           </ul>
         </div>
       </section>
