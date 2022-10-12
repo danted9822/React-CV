@@ -7,10 +7,10 @@
 
   /*========== Colors ==========*/
   --title-color: #0B0A0A;
-  --text-color: #403A3A;
+  --text-color: #14171A;
   --text-color-light: #707070;
-  --container-color: #FAFAFA;
-  --container-color-alt: #F0EFEF;
+  --container-color: #fafafa;
+  --container-color-alt: #1DA1F2;
   --body-color: #FCFCFC;
 
   /*========== Font and typography ==========*/
@@ -57,6 +57,8 @@ body.dark-theme {
   --body-color: #2b2b2b;
 }
 
+
+
 /*========== Button Dark/Light ==========*/
 .change-theme {
   position: absolute;
@@ -74,7 +76,7 @@ body.dark-theme {
 
 
 /*========== Font size variables to scale cv ==========*/
-body.scale-cv{
+body.scale-cv {
   --h1-font-size: .938rem;
   --h2-font-size: .938rem;
   --h3-font-size: .875rem;
@@ -84,7 +86,7 @@ body.scale-cv{
 }
 
 /*========== Generate PDF button ==========*/
-.generate-pdf{
+.generate-pdf {
   display: none;
   position: absolute;
   top: 2.2rem;
@@ -94,99 +96,9 @@ body.scale-cv{
   cursor: pointer;
 }
 
-.generate-pdf:hover{
+.generate-pdf:hover {
   color: var(--title-color);
 }
-
-
-/*========== Classes modified to reduce size and print on A4 sheet ==========*/
-
-.scale-cv .change-theme,
-.scale-cv .generate-pdf{
-  display: none;
-}
-
-.scale-cv .bd-container{
-  max-width: 595px;
-}
-
-.scale-cv .section{
-  padding: 1.5rem 0 .80rem;
-}
-
-
-.scale-cv .section-title{
-  margin-bottom: .75rem;
-}
-
-.scale-cv .resume_left,
-.scale-cv .resume_right{
-  padding: 0 1rem;
-}
-
-.scale-cv .home_img{
-  width: 90px;
-  height: 90px;
-}
-
-.scale-cv .home_container{
-  gap: 1.5rem;
-}
-
-
-.scale-cv .home_data{
-  gap: .25rem;
-}
-
-.scale-cv .home_address,
-.scale-cv .social_container{
-  gap: .75rem;
-}
-
-.scale-cv .home_icon,
-.scale-cv .social_icon,
-.scale-cv .hobbies_icon{
-  font-size: 1rem;
-}
-
-.scale-cv .education_container,
-.scale-cv .experience_container,
-.scale-cv .certificate_container{
-  gap: 1rem;
-}
-
-.scale-cv .education_time,
-.scale-cv .experience_time{
-  padding-right: .5rem;
-}
-
-.scale-cv .education_rounder,
-.scale-cv .experience_rounder{
-  width: 11px;
-  height: 11px;
-  margin-top: .22rem;
-}
-
-.scale-cv .education_line,
-.scale-cv .experience_line{
-  width: 1px;
-  height: 110%;
-  transform: translate(5px, 0);
-}
-
-.scale-cv .education_data,
-.scale-cv .experience_data{
-  gap: .25rem;
-}
-
-.scale-cv .skills_name{
-  margin-bottom: var(--mb-1);
-}
-
-.scale-cv .hobbies_container{
-  column-gap: 2.5rem;
-}
-
 
 body {
   margin: 0 0 var(--header-height) 0;
@@ -371,8 +283,8 @@ img {
 }
 
 .home_img {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   justify-self: center;
   margin-bottom: var(--mb-1);
@@ -562,41 +474,108 @@ img {
 }
 
 
-/* Scroll top */
-.scrolltop {
-  position: fixed;
-  right: 1rem;
-  bottom: -20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: .3rem;
-  background-color: var(--container-color-alt);
-  border-radius: .4rem;
-  z-index: var(--z-tooltip);
-  transition: .4s;
-  visibility: hidden;
-}
-
-.scrolltop_icon {
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-.show-scroll {
-  visibility: visible;
-  bottom: 5rem;
-}
-
 /*========== MEDIA QUERIES ==========*/
 
 /* For small devices, menu two columns */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
   .nav_list {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem, .5rem;
   }
+
+
+
+  body.light-theme {
+
+    background-color: #1DA1F2;
+    color: #fafafa;
+
+  }
+
+  .section-title {
+    font-size: var(--h2-font-size);
+    color: #fafafa;
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    text-align: center;
+    margin-bottom: var(--mb-3);
+  }
+
+  .education_title,
+  .experience_title {
+    font-size: var(--h3-font-size);
+    color: #fafafa;
+  }
+
+  .education_studies,
+  .experience_company {
+    font-size: var(--small-font-size);
+    color: #fafafa;
+  }
+
+  .home_title {
+    font-size: var(--h1-font-size);
+    color: #fafafa;
+
+  }
+
+  .home_profession {
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-1);
+    color: #fafafa;
+
+  }
+
+  .home-button-movil {
+    display: inline-block;
+    border: 2px solid #fafafa;
+    color: #fafafa;
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    transition: .3s;
+    font-weight: var(--font-medium);
+    margin-top: var(--mb-3);
+  }
+
+  .social_link {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: #fafafa;
+  }
+
+  .education_rounder,
+  .experience_rounder {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    margin-top: .25rem;
+
+  }
+
+  .education_line,
+  .experience_line {
+    display: block;
+    width: 2px;
+    height: 110%;
+    background-color: #fafafa;
+    transform: translate(7px, 0);
+  }
+
+  .home_img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    justify-self: center;
+    margin-bottom: var(--mb-1);
+  }
   
+
+
 }
 
 /* Classes modified for large screen size */

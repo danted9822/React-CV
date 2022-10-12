@@ -12,7 +12,7 @@ export const Certificates = ({
 
                 <div className="certificate_container bd-gird">
                     <div className="certificate_content">
-                        <h3 className="certificate_title"> {certificateTitle}</h3>
+                        <p className="certificate_title"> {certificateTitle}</p>
                     </div>
                 </div>
             </section>

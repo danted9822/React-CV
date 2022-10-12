@@ -15,6 +15,7 @@ export const Options = () => {
   useEffect(() => {
     localStorage.setItem("theme", theme);
     localStorage.setItem("icon", icon);
+    document.body.classList[theme === "light" ? "add" : "remove"]("light-theme");
     document.body.classList[theme === "dark" ? "add" : "remove"]("dark-theme");
   }, [theme,icon]);
 

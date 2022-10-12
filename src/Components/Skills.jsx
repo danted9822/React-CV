@@ -8,7 +8,7 @@ export const Skills = ({
   return (
     <>
       <section className="skills section" id="skills">
-        <h2 className="section_title">{technicalLabel}</h2>
+        <h2 className="section-title">{technicalLabel}</h2>
         <div className="skills_content bd-grid">
           <ul className="skills_data">
             {technicalSkills1.map((skill) => <Skill key={skill} skill={skill} />)}

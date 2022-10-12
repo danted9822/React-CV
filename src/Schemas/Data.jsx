@@ -4,7 +4,7 @@ export const Data = {
     profile: {
         name: "Halász Péter",
         ocupation: "Junior Full Stack Developer",
-        location: "3718, Megyaszó, Dózsa György út 4.",
+        location: "Budapest",
         email: "halaszpeter9814@gmail.com",
         telephone: "+36 30 722 5260",
         image: "images/profilepic.jpg",
