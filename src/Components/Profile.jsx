@@ -10,10 +10,14 @@ export const Profile = ({
   image,
 }) => {
   return (
+
     <section className="home" id="home">
+      {/* <img srcSet="images/profilepic.jpg">
+
+      </img> */}
       <div className="home_container section bd-grid">
         <div className="home_data bd-grid">
-          <img src={image} alt="profile_image" className="home_img" />
+          <img src={image} alt="profile_image" className="home_img"   />
           <h1 className="home_title">
             {name}
           </h1>
@@ -39,7 +43,7 @@ export const Profile = ({
 
       <a download="" href="myResume.pdf" >
 
-      <i className='bx bx-download generate-pdf' title="Generate PDF" id="resume-button"></i>
+        <i className='bx bx-download generate-pdf' title="Generate PDF" id="resume-button"></i>
       </a>
     </section>
   );

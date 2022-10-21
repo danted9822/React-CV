@@ -11,6 +11,7 @@
   --text-color-light: #707070;
   --container-color: #fafafa;
   --container-color-alt: #1DA1F2;
+  --img-border-color: #181616;
   --body-color: #FCFCFC;
 
   /*========== Font and typography ==========*/
@@ -50,11 +51,13 @@ html {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --title-color: #f2f2f2;
-  --text-color: #bfbfbf;
+  --title-color: #1DA1F2;
+  --text-color: #1DA1F2;
   --container-color: #212121;
   --container-color-alt: #181616;
   --body-color: #2b2b2b;
+  --text-color-light: #1DA1F2;
+  --img-border-color: #1DA1F2;
 }
 
 
@@ -138,10 +141,10 @@ a {
   text-decoration: none;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 /*========== CLASS CSS ==========*/
 
@@ -283,9 +286,10 @@ img {
 }
 
 .home_img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  border: 2px solid var(--img-border-color);
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
   justify-self: center;
   margin-bottom: var(--mb-1);
 }
@@ -477,24 +481,33 @@ img {
 /*========== MEDIA QUERIES ==========*/
 
 /* For small devices, menu two columns */
-@media screen and (max-width: 450px) {
+@media (max-width: 450px) {
   .nav_list {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem, .5rem;
   }
 
-
+  body.dark-theme {
+    --title-color: #1DA1F2;
+    --text-color: #1DA1F2;
+    --container-color: #1DA1F2;
+    --container-color-alt: #1DA1F2;
+    --text-color-light: #1DA1F2;
+    --body-color: #2b2b2b;
+  }
 
   body.light-theme {
 
     background-color: #1DA1F2;
     color: #fafafa;
+    --text-color-light: #fafafa;
+
 
   }
 
   .section-title {
     font-size: var(--h2-font-size);
-    color: #fafafa;
+    color: var(--container-color);
     font-weight: var(--font-semi-bold);
     text-transform: uppercase;
     letter-spacing: .35rem;
@@ -505,32 +518,32 @@ img {
   .education_title,
   .experience_title {
     font-size: var(--h3-font-size);
-    color: #fafafa;
+    color: var(--container-color);
   }
 
   .education_studies,
   .experience_company {
     font-size: var(--small-font-size);
-    color: #fafafa;
+    color: var(--container-color);
   }
 
   .home_title {
     font-size: var(--h1-font-size);
-    color: #fafafa;
+    color: var(--container-color);
 
   }
 
   .home_profession {
     font-size: var(--normal-font-size);
     margin-bottom: var(--mb-1);
-    color: #fafafa;
+    color: var(--container-color);
 
   }
 
   .home-button-movil {
     display: inline-block;
-    border: 2px solid #fafafa;
-    color: #fafafa;
+    border: 2px solid var(--container-color);
+    color: var(--container-color);
     padding: 1rem 2rem;
     border-radius: .25rem;
     transition: .3s;
@@ -542,7 +555,7 @@ img {
     display: inline-flex;
     align-items: center;
     font-size: var(--small-font-size);
-    color: #fafafa;
+    color: var(--container-color);
   }
 
   .education_rounder,
@@ -551,7 +564,7 @@ img {
     display: block;
     width: 16px;
     height: 16px;
-    background-color: #fafafa;
+    color: var(--container-color);
     border-radius: 50%;
     margin-top: .25rem;
 
@@ -562,18 +575,31 @@ img {
     display: block;
     width: 2px;
     height: 110%;
-    background-color: #fafafa;
+    color: var(--container-color);
     transform: translate(7px, 0);
   }
 
-  .home_img {
-    width: 300px;
-    height: 300px;
+  .skills_circle,
+  .languages_circle {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: var(--container-color);
     border-radius: 50%;
+    margin-right: .75rem;
+
+  }
+
+  .home_img {
+    border: 2px solid var(--container-color);
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
     justify-self: center;
     margin-bottom: var(--mb-1);
+
   }
-  
+
 
 
 }
@@ -611,7 +637,7 @@ img {
 
   }
 
-  .generate-pdf{
+  .generate-pdf {
     display: inline-block;
   }
 
