@@ -13,11 +13,6 @@ export const Profile = ({
   image,
 }) => {
 
-
-  var lsTheme = localStorage.getItem("theme");
-  console.log(lsTheme);
-
-
   return (
 
     <section className="home" id="home">

@@ -4,22 +4,32 @@ export const DownloadResume = () => {
 
     var lsTheme = ""
 
+    try {
+        lsTheme = localStorage.getItem("theme");
+    } catch (e) {
+        console.error(`All Cookies blocked - Error: ${e.message}`);
+    }
+
     const [theme, setTheme] = useState(lsTheme || "light");
 
-    useEffect(() => {
-        lsTheme = localStorage.getItem("theme", theme);
-    }, [theme]);
+    if (lsTheme == "dark") {
 
-    if (theme == "dark") {
-
-        var resume = "myResumeDm.pdf"
+        var resume = "myResumeDM.pdf"
     }
     else {
         var resume = "myResume.pdf"
     }
 
     const _toggleTheme = () => {
-        theme === "light" ? setTheme("dark") : setTheme("light");
+        if (theme == "dark") {
+            setTheme("light")
+            lsTheme = "dark"
+        }
+        else {
+            setTheme("dark")
+            lsTheme = "light"
+        }
+
     };
 
 
