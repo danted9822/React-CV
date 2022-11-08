@@ -1,5 +1,8 @@
 import React from "react";
 import { Options } from "./Options";
+import { DownloadResume } from "./DownloadResume";
+import { DownloadResumeMobile } from "./DownloadResumeMobile";
+
 
 export const Profile = ({
   name,
@@ -9,6 +12,12 @@ export const Profile = ({
   telephone,
   image,
 }) => {
+
+
+  var lsTheme = localStorage.getItem("theme");
+  console.log(lsTheme);
+
+
   return (
 
     <section className="home" id="home">
@@ -17,14 +26,12 @@ export const Profile = ({
       </img> */}
       <div className="home_container section bd-grid">
         <div className="home_data bd-grid">
-          <img src={image} alt="profile_image" className="home_img"   />
+          <img src={image} alt="profile_image" className="home_img" />
           <h1 className="home_title">
             {name}
           </h1>
           <h3 className="home_profession">{ocupation}</h3>
-          <div>
-            <a download="" href="myResume.pdf" className="home-button-movil">Letöltés</a>
-          </div>
+          <DownloadResumeMobile/>
         </div>
 
         <div className="home_address bd-grid">
@@ -41,10 +48,7 @@ export const Profile = ({
       </div>
       <Options />
 
-      <a download="" href="myResume.pdf" >
-
-        <i className='bx bx-download generate-pdf' title="Generate PDF" id="resume-button"></i>
-      </a>
+      <DownloadResume />
     </section>
   );
 };

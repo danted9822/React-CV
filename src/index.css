@@ -13,6 +13,7 @@
   --container-color-alt: #1DA1F2;
   --img-border-color: #181616;
   --body-color: #FCFCFC;
+  --menu-items-color: #0B0A0A;
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -58,6 +59,8 @@ body.dark-theme {
   --body-color: #2b2b2b;
   --text-color-light: #1DA1F2;
   --img-border-color: #1DA1F2;
+  --menu-items-color: #1DA1F2;
+
 }
 
 
@@ -241,7 +244,7 @@ a {
   display: flex;
   flex-direction: column;
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--menu-items-color);
   font-weight: var(--font-medium);
 
 }
