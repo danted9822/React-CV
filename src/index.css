@@ -81,6 +81,24 @@ body.dark-theme {
 }
 
 
+/*========== Button Eng/Hu ==========*/
+
+
+.change-language {
+  position: absolute;
+  left: -10px;
+  top: 2.2rem;
+  display: flex;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.change-language:hover {
+  color: var(--title-color);
+}
+
+
 /*========== Font size variables to scale cv ==========*/
 body.scale-cv {
   --h1-font-size: .938rem;
@@ -653,9 +671,9 @@ a {
     gap: 1.5rem;
   }
 
-  .home-button-movil {
+  /* .home-button-movil {
     display: none;
-  }
+  } */
 
   .languages_content {
     grid-template-columns: repeat(2, max-content);

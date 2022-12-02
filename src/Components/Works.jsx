@@ -1,9 +1,9 @@
 import React from "react";
 import { Description } from "./Description";
-export const Works = ({ works }) => {
+export const Works = ({ works,labelWorks }) => {
     return (
         <section className="experience section" id="experience">
-            <h2 className="section-title">Tapasztalat</h2>
+            <h2 className="section-title">{labelWorks}</h2>
             <div className="experience_container bd-grid">
                 {works.map((work) => (
                     <Work key={work.company} {...work} />

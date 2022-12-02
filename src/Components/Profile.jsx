@@ -1,6 +1,5 @@
 import React from "react";
 import { Options } from "./Options";
-import { DownloadResume } from "./DownloadResume";
 import { DownloadResumeMobile } from "./DownloadResumeMobile";
 
 
@@ -43,7 +42,6 @@ export const Profile = ({
       </div>
       <Options />
 
-      <DownloadResume />
     </section>
   );
 };

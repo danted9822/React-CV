@@ -12,7 +12,7 @@ export const SocialMedia = ({ label, social }) => {
 };
 
 const Social = ({ label, url, className }) => (
-  <a href={url} target="_blank"  className="social_link">
+  <a href={url} target="_blank"  rel="noreferrer" className="social_link">
     <i className={`bx ${className} social_icon`}></i> {label}
   </a>
 );

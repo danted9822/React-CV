@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Education = ({ academic }) => {
+export const Education = ({ academic,labelStudies }) => {
   return (
     <section className="education section" id="education">
-      <h2 className="section-title">Tanulmányok</h2>
+      <h2 className="section-title">{labelStudies}</h2>
       <div className="education__container bd-grid">
         {academic.map((academy) => (
           <Educate key={academy.institution} {...academy} />

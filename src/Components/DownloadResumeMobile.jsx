@@ -1,27 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 export const DownloadResumeMobile = () => {
 
-    var lsTheme = ""
+    var lsTheme = "";
+    var resume = "";
+    var lsLanguage = "";
+
 
     try {
         lsTheme = localStorage.getItem("theme");
+        lsLanguage = localStorage.getItem("language");
     } catch (e) {
         console.error(`All Cookies blocked - Error: ${e.message}`);
     }
 
     const [theme, setTheme] = useState(lsTheme || "light");
 
-    if (lsTheme == "dark") {
 
-        var resume = "myResumeDM.pdf"
+
+    if (lsTheme === "dark") {
+
+        if (lsLanguage === "Eng") {
+            resume = "myResumeDmEng.pdf"
+        } else {
+
+            resume = "myResumeDM.pdf"
+
+        }
+
     }
     else {
-        var resume = "myResume.pdf"
+        if (lsLanguage === "Eng") {
+            resume = "myResumeEng.pdf"
+        } else {
+            resume = "myResume.pdf"
+
+        }
     }
 
     const _toggleTheme = () => {
-        if (theme == "dark") {
+        if (theme === "dark") {
             setTheme("light")
             lsTheme = "dark"
         }
@@ -35,7 +53,7 @@ export const DownloadResumeMobile = () => {
 
     return (
         <div>
-            <a download="" href={resume} onClick={_toggleTheme} className="home-button-movil">Letöltés</a>
+            <a download="" href={resume} onClick={_toggleTheme} className="home-button-movil">Download</a>
         </div>
     );
 };

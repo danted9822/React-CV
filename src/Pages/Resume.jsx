@@ -12,12 +12,18 @@ import { Languages } from "../Components/Languages";
 import { Certificates } from "../Components/Certificates";
 
 import { Data as dataSchema } from "../Schemas/Data";
+import { DataEng as dataSchemaEng } from "../Schemas/DataEng";
 import { Menu as menuSchema } from "../Schemas/Menu";
+import { MenuEng as menuSchemaEng } from "../Schemas/MenuEng";
+
 
 export const Resume = () => {
 
     const query = "(min-width: 968px)";
     const [matches, setMatches] = useState(window.matchMedia(query).matches);
+
+    var lsLanguage;
+    var mobileMenu;
 
     useEffect(() => {
         const media = window.matchMedia(query);
@@ -26,20 +32,36 @@ export const Resume = () => {
         return () => media.removeEventListener("change", listener);
     }, [matches]);
 
-    const { profile, aboutMe, skills, socialMedia, experience, certificates, languages, hobbies } = dataSchema;
+
+    try {
+        lsLanguage = localStorage.getItem("language");
+    } catch (e) {
+        console.error(`All Cookies blocked - Error: ${e.message}`);
+    }
 
 
+
+    if (lsLanguage === "Hun") {
+        var { profile, aboutMe, skills, socialMedia, studies, experience, certificates, languages, hobbies } = dataSchema;
+        mobileMenu = !matches && <Menu {...menuSchema} />;
+
+    } else {
+
+        var { profile, aboutMe, skills, socialMedia, studies, experience, certificates, languages, hobbies } = dataSchemaEng;
+        mobileMenu = !matches && <Menu {...menuSchemaEng} />;
+
+    }
 
     return (
         <>
-            {!matches && <Menu {...menuSchema} />}
+            {mobileMenu}
             <main className="l-main bd-container" id="bd-container">
                 <div className="resume" id="area-cv">
                     <div className="resume_left">
                         <Profile {...profile} />
                         <SocialMedia {...socialMedia} />
                         <AboutMe {...aboutMe} />
-                        <Education {...experience} />
+                        <Education {...studies} />
                         <Skills {...skills} />
                     </div>
                     <div className="resume_right">

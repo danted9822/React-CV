@@ -1,6 +1,6 @@
 
 
-export const Data = {
+export const DataEng = {
     profile: {
         name: "Halász Péter",
         ocupation: "Junior Full Stack Developer",
@@ -10,12 +10,12 @@ export const Data = {
         image: "images/profilepic.jpg",
     },
     aboutMe: {
-        label: "Rólam",
+        label: "About",
         description:
-            "24 éves Junior full stack developer vagyok, aki szeret új technológiákat megismerni és elsajátítani, emellett felhasználóbarát webalkalmazásokat létre hozni.",
+            "I am a 24-year-old Junior full stack developer who likes to learn and master new technologies, as well as creating user-friendly web applications.",
     },
     skills: {
-        technicalLabel: "Készségek",
+        technicalLabel: "Skills",
         technicalSkills1: [
             "HTML",
             "CSS",
@@ -54,32 +54,34 @@ export const Data = {
             },
         ],
     },
+
+
     experience: {
-        labelWorks: "TAPASZTALAT",
+        labelWorks: "Experience",
         works: [
             {
-                title: "Szoftverfejlesztő",
+                title: "Software developer",
                 period: "2022.06 - 2022.08",
                 company: "Interface Kft.",
                 description: [
-                    "Meglévő rendszer Java és Vue nyelvre való átírása."
+                    "Rewriting an existing system into Java and Vue."
                 ],
             },
             {
-                title: "Rendszergazda",
+                title: "System Administrator",
                 period: "2019.07 - 2020.01",
                 company: "Polgármesteri Hivatal Szerencs",
                 description: [
-                    "• Windows hálozat üzemeltetése-karbantartása",
-                    "• Linux szerverek üzemeltetése",
-                    "• Informatikai segítségnyújtás a kollégáknak"
+                    "• Windows network operation and maintenance",
+                    "• Operation of Linux servers",
+                    "• IT assistance for colleagues."
                 ],
             },
-        ]
+        ],
     },
 
     studies: {
-        labelStudies: "TANULMÁNYOK",
+        labelStudies: "Education",
 
         academic: [
             {
@@ -88,12 +90,12 @@ export const Data = {
                 institution: "Codecool",
             },
             {
-                career: "Rendszerüzemeltető OKJ",
+                career: "Sytem Operator OKJ",
                 date: "2017-2019",
                 institution: "Miskolci SZC Bláthy Ottó Villamosipari Technikum",
             },
             {
-                career: "Érettségi",
+                career: "Final Exam",
                 date: "2013-2017",
                 institution: "Bocskai István Katolikus Gimnázium és Technikum",
             }
@@ -102,45 +104,45 @@ export const Data = {
 
 
     certificates: {
-        certificateLabel: "Tanúsítványok",
+        certificateLabel: "Certificates",
         certificateTitle: "Udemy: 2022 Complete Python Bootcamp From Zero to Hero in Python"
     },
 
     languages: {
-        languageTitle: "Nyelvek",
+        languageTitle: "Languages",
         language: [
             {
-                name: "Magyar"
+                name: "Hungarian"
             },
             {
 
-                name: "Angol"
+                name: "English"
             }
 
         ]
     },
 
     hobbies: {
-        hobbieTitle: "Hobbik",
+        hobbieTitle: "Hobbies",
         hobbie: [
             {
-                label: "Zenehallgatás",
-                name: "zenehallgatás",
+                label: "Listening to music",
+                name: "listening to music",
                 className: "bx-headphone",
             },
             {
-                label: "Olvasás",
-                name: "olvasás",
+                label: "Read",
+                name: "read",
                 className: "bx-book-alt",
             },
             {
-                label: "Videójáték",
-                name: "videójáték",
+                label: "Video game",
+                name: "video game",
                 className: "bxs-joystick",
             },
             {
-                label: "Futás",
-                name: "futás",
+                label: "Jogging",
+                name: "jogging",
                 className: "bx-run",
             }
 
