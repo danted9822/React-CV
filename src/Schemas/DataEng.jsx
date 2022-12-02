@@ -131,12 +131,12 @@ export const DataEng = {
                 className: "bx-headphone",
             },
             {
-                label: "Read",
+                label: "Reading",
                 name: "read",
                 className: "bx-book-alt",
             },
             {
-                label: "Video game",
+                label: "Playing video games",
                 name: "video game",
                 className: "bxs-joystick",
             },
