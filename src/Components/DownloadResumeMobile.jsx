@@ -21,19 +21,19 @@ export const DownloadResumeMobile = () => {
     if (lsTheme === "dark") {
 
         if (lsLanguage === "Eng") {
-            resume = "myResumeDmEng.pdf"
+            resume = "HalászPéterCvEngD.pdf"
         } else {
 
-            resume = "myResumeDM.pdf"
+            resume = "HalászPéterCvHunD.pdf"
 
         }
 
     }
     else {
         if (lsLanguage === "Eng") {
-            resume = "myResumeEng.pdf"
+            resume = "HalászPéterCvEngL.pdf"
         } else {
-            resume = "myResume.pdf"
+            resume = "HalászPéterCvHunL.pdf"
 
         }
     }

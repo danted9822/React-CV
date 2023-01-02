@@ -20,13 +20,15 @@ export const DataEng = {
             "HTML",
             "CSS",
             "JS",
-            "C#",
-            ".Net",
+            "React",
+            "NextJs",
+            "TypeScript",
         ],
         technicalSkills2: [
             "Java",
             "Python",
-            "React",
+            "C#",
+            ".Net",
             "SQL",
             "GitHub"
         ]
