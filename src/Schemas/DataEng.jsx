@@ -12,7 +12,7 @@ export const DataEng = {
     aboutMe: {
         label: "About",
         description:
-            "I am a 24-year-old Junior full stack developer who likes to learn and master new technologies, as well as creating user-friendly web applications.",
+            "I am a 27-year-old Junior full stack developer who likes to learn and master new technologies, as well as creating user-friendly web applications.",
     },
     skills: {
         technicalLabel: "Skills",
@@ -27,10 +27,10 @@ export const DataEng = {
         technicalSkills2: [
             "Java",
             "Python",
+            "Django",
             "C#",
             ".Net",
             "SQL",
-            "GitHub"
         ]
     },
     socialMedia: {
@@ -62,6 +62,16 @@ export const DataEng = {
         labelWorks: "Experience",
         works: [
             {
+                title: "Junior Backend Developer",
+                period: "2023.02 - ",
+                company: "OVB Magyarország",
+                description: [
+                    "• Contributed to the development and maintenance of banking software applications.",
+                    "• Performed manual testing and bug fixing in a Django environment.",
+                    "• Optimized applications and ensured their functionality met business requirements."
+                ],
+            },    
+            {
                 title: "Software developer",
                 period: "2022.06 - 2022.08",
                 company: "Interface Kft.",
@@ -72,10 +82,10 @@ export const DataEng = {
             {
                 title: "System Administrator",
                 period: "2019.07 - 2020.01",
-                company: "Polgármesteri Hivatal Szerencs",
+                company: "Mayor's Office Szerencs",
                 description: [
-                    "• Windows network operation and maintenance",
-                    "• Operation of Linux servers",
+                    "• Windows network operation and maintenance.",
+                    "• Operation of Linux servers.",
                     "• IT assistance for colleagues."
                 ],
             },
@@ -84,7 +94,6 @@ export const DataEng = {
 
     studies: {
         labelStudies: "Education",
-
         academic: [
             {
                 career: "Full Stack Developer",
@@ -105,9 +114,18 @@ export const DataEng = {
     },
 
 
-    certificates: {
-        certificateLabel: "Certificates",
-        certificateTitle: "Udemy: 2022 Complete Python Bootcamp From Zero to Hero in Python"
+      certificates: {
+          certificateLabel: "Certificates",
+          certificates: [
+            {
+              title: "Udemy: 2022 Complete Python Bootcamp From Zero to Hero in Python",
+              link: "https://www.udemy.com/course/complete-python-bootcamp/"
+            },
+            {
+              title: "Udemy: Build a Backend REST API with Python & Django - Advanced",
+              link: "https://www.udemy.com/course/django-python-advanced/?couponCode=JUST4U02223"
+            },
+          ]
     },
 
     languages: {

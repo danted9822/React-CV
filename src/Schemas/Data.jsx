@@ -12,7 +12,7 @@ export const Data = {
     aboutMe: {
         label: "Rólam",
         description:
-            "24 éves Junior full stack developer vagyok, aki szeret új technológiákat megismerni és elsajátítani, emellett felhasználóbarát webalkalmazásokat létre hozni.",
+            "27 éves Junior full stack developer vagyok, aki szeret új technológiákat megismerni és elsajátítani, emellett felhasználóbarát webalkalmazásokat létre hozni.",
     },
     skills: {
         technicalLabel: "Készségek",
@@ -27,10 +27,10 @@ export const Data = {
         technicalSkills2: [
             "Java",
             "Python",
+            "Django",
             "C#",
             ".Net",
             "SQL",
-            "GitHub"
         ]
     },
     socialMedia: {
@@ -60,13 +60,23 @@ export const Data = {
         labelWorks: "TAPASZTALAT",
         works: [
             {
+                title: "Junior Backend Developer",
+                period: "2023.02 - ",
+                company: "OVB Magyarország",
+                description: [
+                    "• Részvétel banki szoftverek fejlesztésében és karbantartásában.",
+                    "• Django környezetben történő manuális tesztelés és hibajavítás.",
+                    "• Alkalmazások optimalizálása és működésük biztosítása az üzleti igényeknek megfelelően."
+                ],
+            },    
+            {
                 title: "Szoftverfejlesztő",
                 period: "2022.06 - 2022.08",
                 company: "Interface Kft.",
                 description: [
                     "Meglévő rendszer Java és Vue nyelvre való átírása."
                 ],
-            },
+            }, 
             {
                 title: "Rendszergazda",
                 period: "2019.07 - 2020.01",
@@ -103,10 +113,20 @@ export const Data = {
     },
 
 
+
     certificates: {
         certificateLabel: "Tanúsítványok",
-        certificateTitle: "Udemy: 2022 Complete Python Bootcamp From Zero to Hero in Python"
-    },
+        certificates: [
+          {
+            title: "Udemy: 2022 Complete Python Bootcamp From Zero to Hero in Python",
+            link: "https://www.udemy.com/course/complete-python-bootcamp/"
+          },
+          {
+            title: "Udemy: Build a Backend REST API with Python & Django - Advanced",
+            link: "https://www.udemy.com/course/django-python-advanced/?couponCode=JUST4U02223"
+          },
+        ]
+  },
 
     languages: {
         languageTitle: "Nyelvek",

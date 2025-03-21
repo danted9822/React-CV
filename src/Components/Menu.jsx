@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   NavLink,
   Route,
-  Redirect,
+  Routes,
+  Navigate,
 } from "react-router-dom";
 
 export const Menu = ({ menu }) => {
@@ -17,7 +18,9 @@ export const Menu = ({ menu }) => {
   return (
     <header className="l-header" id="header">
       <Router>
-        <Route exact path="/"><Redirect to="/#home" /></Route>
+        <Routes>
+          <Route path="/" element={<Navigate to="/#home" />} />
+        </Routes>
         <nav className="nav bd-container">
           <span className="nav_logo">Menu</span>
           <div
@@ -28,11 +31,11 @@ export const Menu = ({ menu }) => {
               {menu.map(({ label, section, className }) => (
                 <li className="nav_item" key={label}>
                   <NavLink
-                    className="nav_link"
-                    activeClassName="active-link"
+                    className={({ isActive }) =>
+                      isActive ? "nav_link active-link" : "nav_link"
+                    }
                     onClick={_handleActiveSection}
                     to={{ pathname: "/", hash: section }}
-                    isActive={(m, l) => (l.hash === section ? true : false)}
                   >
                     <i className={`bx ${className} nav_icon`} /> {label}
                   </NavLink>

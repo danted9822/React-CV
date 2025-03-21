@@ -1,12 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import './index.css';
 import { Resume } from "./Pages/Resume";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <Resume />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
-

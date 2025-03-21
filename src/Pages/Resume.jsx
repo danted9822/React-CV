@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { Profile } from "../Components/Profile";
 import { AboutMe } from "../Components/AboutMe";
 import { Education } from "../Components/Education";
@@ -16,14 +15,12 @@ import { DataEng as dataSchemaEng } from "../Schemas/DataEng";
 import { Menu as menuSchema } from "../Schemas/Menu";
 import { MenuEng as menuSchemaEng } from "../Schemas/MenuEng";
 
-
 export const Resume = () => {
-
     const query = "(min-width: 968px)";
     const [matches, setMatches] = useState(window.matchMedia(query).matches);
 
-    var lsLanguage;
-    var mobileMenu;
+    let lsLanguage;
+    let mobileMenu;
 
     useEffect(() => {
         const media = window.matchMedia(query);
@@ -32,24 +29,20 @@ export const Resume = () => {
         return () => media.removeEventListener("change", listener);
     }, [matches]);
 
-
     try {
         lsLanguage = localStorage.getItem("language");
     } catch (e) {
         console.error(`All Cookies blocked - Error: ${e.message}`);
     }
 
-
+    let profile, aboutMe, skills, socialMedia, studies, experience, certificates, languages, hobbies;
 
     if (lsLanguage === "Hun") {
-        var { profile, aboutMe, skills, socialMedia, studies, experience, certificates, languages, hobbies } = dataSchema;
+        ({ profile, aboutMe, skills, socialMedia, studies, experience, certificates, languages, hobbies } = dataSchema);
         mobileMenu = !matches && <Menu {...menuSchema} />;
-
     } else {
-
-        var { profile, aboutMe, skills, socialMedia, studies, experience, certificates, languages, hobbies } = dataSchemaEng;
+        ({ profile, aboutMe, skills, socialMedia, studies, experience, certificates, languages, hobbies } = dataSchemaEng);
         mobileMenu = !matches && <Menu {...menuSchemaEng} />;
-
     }
 
     return (
