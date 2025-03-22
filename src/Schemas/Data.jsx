@@ -61,7 +61,7 @@ export const Data = {
         works: [
             {
                 title: "Junior Backend Developer",
-                period: "2023.02 - 2025.04",
+                period: "2023.02 - ",
                 company: "OVB Magyarország",
                 description: [
                     "• Részvétel banki szoftverek fejlesztésében és karbantartásában.",

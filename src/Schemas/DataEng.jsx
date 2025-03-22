@@ -63,7 +63,7 @@ export const DataEng = {
         works: [
             {
                 title: "Junior Backend Developer",
-                period: "2023.02 - 2025.04",
+                period: "2023.02 - ",
                 company: "OVB Magyarország",
                 description: [
                     "• Contributed to the development and maintenance of banking software applications.",
@@ -82,7 +82,7 @@ export const DataEng = {
             {
                 title: "System Administrator",
                 period: "2019.07 - 2020.01",
-                company: "Polgármesteri Hivatal Szerencs",
+                company: "Mayor's Office Szerencs",
                 description: [
                     "• Windows network operation and maintenance.",
                     "• Operation of Linux servers.",

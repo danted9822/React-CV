@@ -62,7 +62,7 @@ body.dark-theme {
   --menu-items-color: #1DA1F2;
   --link-color: #4AB8FF;
   --link-hover-color: #7FBFFF; 
-  --link-visited-color: #6CB1FF; 
+  --link-visited-color: #1DA1F2; 
   a {
     color: var(--link-color);
     text-decoration: none;
@@ -395,7 +395,7 @@ a {
 
 .social_icon {
   font-size: 1.2rem;
-  margin-right: .25rem;
+  margin-right: .30rem;
 }
 
 
