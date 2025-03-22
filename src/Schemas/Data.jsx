@@ -122,7 +122,7 @@ export const Data = {
             link: "https://www.udemy.com/course/complete-python-bootcamp/"
           },
           {
-            title: "Build a Backend REST API with Python & Django - Advanced",
+            title: "Udemy: Build a Backend REST API with Python & Django - Advanced",
             link: "https://www.udemy.com/course/django-python-advanced/?couponCode=JUST4U02223"
           },
         ]
